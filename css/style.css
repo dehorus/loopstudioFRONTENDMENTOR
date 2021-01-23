@@ -34,7 +34,7 @@ p {
     color: var(--DarkGray);
 }
 .container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -74,7 +74,7 @@ p {
 .top-nav {
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -136,16 +136,45 @@ p {
     transition: all 0.8s;
 }
 
+@media (min-width: 965px){
+    .hamburguer-menu {
+        display: none;
+    }
+
+    .navbar {
+        position: inherit;
+        right: inherit;
+        background-color: transparent;
+    }
+
+    .nav-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .nav-group a {
+        font-size: .8em;
+        text-align: center;
+    }
+}
+
 .hero {
     width: 100%;
     height: 100%;
     margin: 0;
     background-image: url(../images/mobile/image-hero.jpg);
+    background-size: cover;
+}
+
+.container-hero {
+    width: 95%;
+    margin: 0 auto;
 }
 
 .texto {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
     padding: 20em 0;
 }
 
@@ -159,6 +188,26 @@ p {
     text-align: left;
     padding: 1em 0.5em;
     line-height: 1em;
+}
+
+@media (min-width: 965px){
+    .container-hero{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .hero{
+        background-size: cover;
+    }
+    .texto{
+        width: 60%;
+        margin: 0;
+        padding: 10em 0;
+    }
+
+    .text-promo {
+        font-size: 5ch;
+        padding: 0.5em 0.5em;
+    }
 }
 
 .inform {
@@ -194,20 +243,63 @@ p {
     text-align: center;
 }
 
+@media (min-width: 965px){
+    .inform {
+        position: relative;
+        margin-bottom: 6.5em;
+    }
+    .card {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card img {
+        object-fit: cover;
+    }
+
+    .text-info {
+        position: absolute;
+        background-color: white;
+        width: 50%;
+        padding: 5em 4.5em;
+        right: 0;
+        margin: 0;
+        bottom: -6em;
+    }
+
+    .text-info h2 {
+        font-size: 3.5ch;
+        text-align: left;
+    }
+    .text-info p {
+        font-size: 1.3ch;
+        text-align: justify;
+    }
+}
+
 .portfolio-list {
     display: flex;
     flex-direction: column;
 }
 
+.btn-head {
+    display: none;
+}
+
 .pic-proyect {
     position: relative;
     margin: 1em 0;
+    height: 10em;
 }
 .pic-proyect:first-child {
     margin-top: 4em;
 }
 .pic-proyect img {
+    width: 100%;
     position: relative;
+    object-fit: cover;
+    height: 100%;
 }
 .pic-proyect h3 {
     position: absolute;
@@ -233,6 +325,55 @@ p {
     color: white;
 }
 
+@media (min-width: 965px){
+    .head-portfolio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .h2-infor {
+        text-align: left;
+        height: 100%;
+        font-size: 3.6ch;
+    }
+
+    .btn-head {
+        display: block;
+        width: auto;
+        margin: 0;
+        padding: 0em 3em;
+        font-size: 1.5ch;
+        font-weight: 300;
+    }
+
+    .btn-foot {
+        display: none;
+    }
+
+    .portfolio-list {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 1em;
+        row-gap: 1em;
+        margin: 2em 0;
+    }
+
+    .pic-proyect{
+        margin: 0;
+        height: 100%;
+    }
+    .pic-proyect img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .pic-proyect:first-child{
+        margin-top: 0;
+    }
+}
+footer{
+    background-color: black;
+}
 .footer {
     background-color: var(--Black);
     width: 100%;
@@ -290,6 +431,7 @@ p {
 }
 
 .attribution {
+    background-color: transparent;
     margin-top: 1em;
     color: white;
     text-align: center;
@@ -299,4 +441,48 @@ p {
     color: darkmagenta;
     text-decoration: none;
     font-style: italic;
+}
+
+@media (min-width: 845px){
+    .container-footer{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .foot-side-left img{
+        margin-top: 2em;
+        width: 25%;
+    }
+
+    .list-links {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2em;
+    }
+
+    .list-links a{
+        margin: 1em 1em;
+    }
+
+    .list-links a:first-child{
+        margin-left: 0;
+    }
+
+    .icons {
+        height: 23%;
+        margin-top: 2em;
+        justify-content: flex-end;
+    }
+
+    .icon {
+        width: 1.8em;
+        height: 1.8em;
+        margin: 0 0.3em;
+    }
+
+    .container-footer h4{
+        margin-top: 1.5em;
+    }
 }
