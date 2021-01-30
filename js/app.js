@@ -8,13 +8,13 @@ const d = document;
 
 
 
-window.addEventListener('scroll', ()=> {
+window.addEventListener('scroll', () => {
     const $navbar = document.querySelector('.navbar-container');
 
     const $navlinks = document.querySelectorAll('.nav-group a');
 
     const $logo = document.querySelector('.logo');
-    if(window.pageYOffset > 465){
+    if (window.pageYOffset > 465) {
         $navbar.classList.add('bg-white');
         $navlinks.forEach(el => el.classList.add('links-white'));
         $logo.classList.add('logo-dark');
@@ -29,5 +29,10 @@ window.addEventListener('scroll', ()=> {
 
 menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('change');
-    $line.forEach(el => el.classList.remove('lineW'));
+    if (window.pageYOffset > 465) {
+        $line.forEach(el => el.classList.toggle('lineW'));
+    } else {
+        $line.forEach(el => el.classList.remove('lineW'));
+    }
+
 });
